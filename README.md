@@ -1,4 +1,4 @@
-# vr-kanji-spot-the-difference-001
+# vr-kanji-spot-the-difference-003
 
 【VRゲーム】漢字間違い探し【003】土性、禄存・司禄の部屋。
 
