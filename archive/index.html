@@ -11,58 +11,65 @@
 
   <body>
     <a-scene>
+      <!-- assets -->
       <a-assets>
         <img id="sky" src="assets/sky.jpg" />
 
         <img id="tunnel" src="assets/tunnel.png" />
         <img id="tunnel-NRM" src="assets/tunnel-NRM.png" />
+
         <img id="tracks" src="assets/tracks37.png" />
         <img id="tracks-NRM" src="assets/tracks37-NRM.png" />
 
-        <img id="seki" src="assets/stage/seki.png" />
-        <img id="seki-NRM" src="assets/stage/seki-NRM.png" />
-        <img id="mon" src="assets/stage/mon.png" />
-        <img id="mon-NRM" src="assets/stage/mon-NRM.png" />
-        <img id="saku" src="assets/stage/saku.png" />
-        <img id="saku-NRM" src="assets/stage/saku-NRM.png" />
-        <img id="kan" src="assets/stage/kan.png" />
-        <img id="kan-NRM" src="assets/stage/kan-NRM.png" />
+        <img id="shi" src="assets/stage/shi.png" />
+        <img id="shi-NRM" src="assets/stage/shi-NRM.png" />
 
-        <img id="q-1-1" src="assets/quiz/seki1.png" />
-        <img id="q-1-1-NRM" src="assets/quiz/seki1-NRM.png" />
-        <img id="q-1-2" src="assets/quiz/seki2.png" />
-        <img id="q-1-2-NRM" src="assets/quiz/seki2-NRM.png" />
-        <img id="q-1-3" src="assets/quiz/seki3.png" />
-        <img id="q-1-3-NRM" src="assets/quiz/seki3-NRM.png" />
+        <img id="zon" src="assets/stage/zon.png" />
+        <img id="zon-NRM" src="assets/stage/zon-NRM.png" />
 
-        <img id="q-2-1" src="assets/quiz/mon1.png" />
-        <img id="q-2-1-NRM" src="assets/quiz/mon1-NRM.png" />
-        <img id="q-2-2" src="assets/quiz/mon2.png" />
-        <img id="q-2-2-NRM" src="assets/quiz/mon2-NRM.png" />
-        <img id="q-2-3" src="assets/quiz/mon3.png" />
-        <img id="q-2-3-NRM" src="assets/quiz/mon3-NRM.png" />
+        <img id="sei" src="assets/stage/sei.png" />
+        <img id="sei-NRM" src="assets/stage/sei-NRM.png" />
 
-        <img id="q-3-1" src="assets/quiz/saku1.png" />
-        <img id="q-3-1-NRM" src="assets/quiz/saku1-NRM.png" />
-        <img id="q-3-2" src="assets/quiz/saku2.png" />
-        <img id="q-3-2-NRM" src="assets/quiz/saku2-NRM.png" />
-        <img id="q-3-3" src="assets/quiz/saku3.png" />
-        <img id="q-3-3-NRM" src="assets/quiz/saku3-NRM.png" />
+        <img id="roku" src="assets/stage/roku.png" />
+        <img id="roku-NRM" src="assets/stage/roku-NRM.png" />
 
-        <img id="q-4-1" src="assets/quiz/kan1.png" />
-        <img id="q-4-1-NRM" src="assets/quiz/kan1-NRM.png" />
-        <img id="q-4-2" src="assets/quiz/kan2.png" />
-        <img id="q-4-2-NRM" src="assets/quiz/kan2-NRM.png" />
-        <img id="q-4-3" src="assets/quiz/kan3.png" />
-        <img id="q-4-3-NRM" src="assets/quiz/kan3-NRM.png" />
+        <img id="q-shi1" src="assets/quiz/shi1.png" />
+        <img id="q-shi1-NRM" src="assets/quiz/shi1-NRM.png" />
+        <img id="q-shi2" src="assets/quiz/shi2.png" />
+        <img id="q-shi2-NRM" src="assets/quiz/shi2-NRM.png" />
+        <img id="q-shi3" src="assets/quiz/shi3.png" />
+        <img id="q-shi3-NRM" src="assets/quiz/shi3-NRM.png" />
+
+        <img id="q-zon1" src="assets/quiz/zon1.png" />
+        <img id="q-zon1-NRM" src="assets/quiz/zon1-NRM.png" />
+        <img id="q-zon2" src="assets/quiz/zon2.png" />
+        <img id="q-zon2-NRM" src="assets/quiz/zon2-NRM.png" />
+        <img id="q-zon3" src="assets/quiz/zon3.png" />
+        <img id="q-zon3-NRM" src="assets/quiz/zon3-NRM.png" />
+
+        <img id="q-sei1" src="assets/quiz/sei1.png" />
+        <img id="q-sei1-NRM" src="assets/quiz/sei1-NRM.png" />
+        <img id="q-sei2" src="assets/quiz/sei2.png" />
+        <img id="q-sei2-NRM" src="assets/quiz/sei2-NRM.png" />
+        <img id="q-sei3" src="assets/quiz/sei3.png" />
+        <img id="q-sei3-NRM" src="assets/quiz/sei3-NRM.png" />
+
+        <img id="q-roku1" src="assets/quiz/roku1.png" />
+        <img id="q-roku1-NRM" src="assets/quiz/roku1-NRM.png" />
+        <img id="q-roku2" src="assets/quiz/roku2.png" />
+        <img id="q-roku2-NRM" src="assets/quiz/roku2-NRM.png" />
+        <img id="q-roku3" src="assets/quiz/roku3.png" />
+        <img id="q-roku3-NRM" src="assets/quiz/roku3-NRM.png" />
 
         <img id="correct" src="assets/correct.png" />
       </a-assets>
 
+      <!-- Camera Rig -->
       <a-entity
         movement-controls="speed: 1; constrainToNavMesh: true"
         position="0 0 45"
       >
+        <!-- Camera -->
         <a-entity
           camera
           position="0 1.6 0"
@@ -70,13 +77,14 @@
           move-check="raycaster:#move"
           quiz-check="raycaster:#quiz"
         >
+          <!-- timer -->
           <a-text
-            id="timer-text"
             color="#FF0000"
             align="center"
             position="0 1 -1.5"
             value="0"
           ></a-text>
+
           <a-entity
             id="move"
             rayOrigin="mouse"
@@ -90,9 +98,11 @@
         </a-entity>
       </a-entity>
 
+      <!-- nav-mesh -->
       <a-entity position=" 0 -0.1 0">
+        <!-- 1st stage -->
         <a-plane
-          id="gate-1"
+          id="first-gate"
           color="#000"
           width="5"
           height="100"
@@ -105,13 +115,13 @@
             material="opacity:0"
             position="0 49 1"
             rotation="90 0 0"
-            class="gate gate-end"
-            data-stage="1"
+            class="gate first-end"
             scale="10 10 0"
-          ></a-plane>
+          >
+          </a-plane>
         </a-plane>
         <a-plane
-          id="stage-1"
+          id="first-stage"
           color="#000"
           width="98"
           height="98"
@@ -119,8 +129,9 @@
           position="0 0 -95"
         ></a-plane>
 
+        <!-- 2st stage -->
         <a-plane
-          id="gate-2"
+          id="second-gate"
           color="#000"
           width="5"
           height="100"
@@ -133,31 +144,33 @@
             material="opacity:0"
             position="0 -47 1"
             rotation="90 0 0"
-            class="gate gate-start"
-            data-stage="2"
+            class="gate second-start"
             scale="10 10 0"
-          ></a-plane>
+          >
+          </a-plane>
           <a-plane
             color="#333333"
             material="opacity:0"
             position="0 49 1"
             rotation="90 0 0"
-            class="gate gate-end"
-            data-stage="2"
+            class="gate second-end"
             scale="10 10 0"
-          ></a-plane>
+          >
+          </a-plane>
         </a-plane>
         <a-plane
-          id="stage-2"
+          id="second-stage"
           color="#000"
           width="98"
           height="98"
           rotation="-90 0 0"
           position="-190 0 -95"
-        ></a-plane>
+        >
+        </a-plane>
 
+        <!-- 3st stage -->
         <a-plane
-          id="gate-3"
+          id="third-gate"
           color="#000"
           width="5"
           height="100"
@@ -170,31 +183,33 @@
             material="opacity:0"
             position="0 -47 1"
             rotation="90 0 0"
-            class="gate gate-start"
-            data-stage="3"
+            class="gate third-start"
             scale="10 10 0"
-          ></a-plane>
+          >
+          </a-plane>
           <a-plane
             color="#333333"
             material="opacity:0"
             position="0 49 1"
             rotation="90 0 0"
-            class="gate gate-end"
-            data-stage="3"
+            class="gate third-end"
             scale="10 10 0"
-          ></a-plane>
+          >
+          </a-plane>
         </a-plane>
         <a-plane
-          id="stage-3"
+          id="third-stage"
           color="#000"
           width="98"
           height="98"
           rotation="-90 0 0"
           position="-190 0 -285"
-        ></a-plane>
+        >
+        </a-plane>
 
+        <!-- 4st stage -->
         <a-plane
-          id="gate-4"
+          id="fourth-gate"
           color="#000"
           width="5"
           height="100"
@@ -207,31 +222,33 @@
             material="opacity:0"
             position="0 47 1"
             rotation="-90 0 0"
-            class="gate gate-start"
-            data-stage="4"
+            class="gate fourth-start"
             scale="10 10 0"
-          ></a-plane>
+          >
+          </a-plane>
           <a-plane
             color="#333333"
             material="opacity:0"
             position="0 -49 1"
             rotation="-90 0 0"
-            class="gate gate-end"
-            data-stage="4"
+            class="gate fourth-end"
             scale="10 10 0"
-          ></a-plane>
+          >
+          </a-plane>
         </a-plane>
         <a-plane
-          id="stage-4"
+          id="fourth-stage"
           color="#000"
           width="98"
           height="98"
           rotation="-90 0 0"
           position="0 0 -285"
-        ></a-plane>
+        >
+        </a-plane>
 
+        <!-- goal -->
         <a-plane
-          id="gate-5"
+          id="goal-gate"
           color="#000"
           width="5"
           height="100"
@@ -244,22 +261,23 @@
             material="opacity:0"
             position="0 -47 1"
             rotation="90 0 0"
-            class="gate gate-start"
-            data-stage="5"
+            class="gate goal-start"
             scale="10 10 0"
-          ></a-plane>
+          >
+          </a-plane>
           <a-plane
             color="#333333"
             material="opacity:0"
             position="0 49 1"
             rotation="90 0 0"
-            class="gate gate-end"
-            data-stage="5"
+            class="gate goal-end"
             scale="10 10 0"
-          ></a-plane>
+          >
+          </a-plane>
         </a-plane>
       </a-entity>
 
+      <!-- 1st stage -->
       <a-entity position="0 0 0" rotation="0 0 0">
         <a-plane
           color="#666"
@@ -272,14 +290,15 @@
         >
           <a-plane
             material="src:#tracks; normalMap: #tracks-NRM; transparent: true"
-            width="5.12"
+            width=" 5.12"
             height="2.56"
             position="0 0 0.01"
             scale="1 37 1"
-          ></a-plane>
+          >
+          </a-plane>
         </a-plane>
         <a-cylinder
-          id="tunnel-1"
+          id="first-tunnel"
           color="#333"
           material="src: #tunnel; normalMap: #tunnel-NRM"
           side="double"
@@ -290,18 +309,19 @@
           position="0 1 0"
         ></a-cylinder>
         <a-box
-          id="box-1"
           class="box-stage"
-          data-stage="1"
-          material="src: #seki; repeat: -10, 10; normalMap: #seki-NRM; normalTextureRepeat: -10, 10"
+          material="src: #shi;repeat: -10, 10; normalMap: #shi-NRM; normalTextureRepeat: -10, 10"
           side="back"
           width="100"
           height="100"
           depth="100"
           position="0 50.1 -95"
-        ></a-box>
+        >
+          <!-- 3文字のランダムなクイズ -->
+        </a-box>
       </a-entity>
 
+      <!-- 2st stage -->
       <a-entity position="-95 0 -95" rotation="0 90 0">
         <a-plane
           color="#666"
@@ -314,14 +334,15 @@
         >
           <a-plane
             material="src:#tracks; normalMap: #tracks-NRM; transparent: true"
-            width="5.12"
+            width=" 5.12"
             height="2.56"
             position="0 0 0.01"
             scale="1 37 1"
-          ></a-plane>
+          >
+          </a-plane>
         </a-plane>
         <a-cylinder
-          id="tunnel-2"
+          id="second-tunnel"
           color="#333"
           material="src: #tunnel; normalMap: #tunnel-NRM"
           side="double"
@@ -333,18 +354,19 @@
           visible="false"
         ></a-cylinder>
         <a-box
-          id="box-2"
           class="box-stage"
-          data-stage="2"
-          material="src: #mon; repeat: -10, 10; normalMap: #mon-NRM; normalTextureRepeat: -10, 10"
+          material="src: #zon;repeat: -10, 10; normalMap: #zon-NRM; normalTextureRepeat: -10, 10"
           side="back"
           width="100"
           height="100"
           depth="100"
           position="0 50.1 -95"
-        ></a-box>
+        >
+          <!-- 3文字のランダムなクイズ -->
+        </a-box>
       </a-entity>
 
+      <!-- 3st stage -->
       <a-entity position="-190 0 -190" rotation="0 0 0">
         <a-plane
           color="#666"
@@ -357,14 +379,15 @@
         >
           <a-plane
             material="src:#tracks; normalMap: #tracks-NRM; transparent: true"
-            width="5.12"
+            width=" 5.12"
             height="2.56"
             position="0 0 0.01"
             scale="1 37 1"
-          ></a-plane>
+          >
+          </a-plane>
         </a-plane>
         <a-cylinder
-          id="tunnel-3"
+          id="third-tunnel"
           color="#333"
           material="src: #tunnel; normalMap: #tunnel-NRM"
           side="double"
@@ -376,18 +399,19 @@
           visible="false"
         ></a-cylinder>
         <a-box
-          id="box-3"
           class="box-stage"
-          data-stage="3"
-          material="src: #saku; repeat: -10, 10; normalMap: #saku-NRM; normalTextureRepeat: -10, 10"
+          material="src: #sei;repeat: -10, 10; normalMap: #sei-NRM; normalTextureRepeat: -10, 10"
           side="back"
           width="100"
           height="100"
           depth="100"
           position="0 50.1 -95"
-        ></a-box>
+        >
+          <!-- 3文字のランダムなクイズ -->
+        </a-box>
       </a-entity>
 
+      <!-- 4st stage -->
       <a-entity position="-95 0 -285" rotation="0 270 0">
         <a-plane
           color="#666"
@@ -400,14 +424,15 @@
         >
           <a-plane
             material="src:#tracks; normalMap: #tracks-NRM; transparent: true"
-            width="5.12"
+            width=" 5.12"
             height="2.56"
             position="0 0 0.01"
             scale="1 37 1"
-          ></a-plane>
+          >
+          </a-plane>
         </a-plane>
         <a-cylinder
-          id="tunnel-4"
+          id="fourth-tunnel"
           color="#333"
           material="src: #tunnel; normalMap: #tunnel-NRM"
           side="double"
@@ -419,18 +444,19 @@
           visible="false"
         ></a-cylinder>
         <a-box
-          id="box-4"
           class="box-stage"
-          data-stage="4"
-          material="src: #kan; repeat: -10, 10; normalMap: #kan-NRM; normalTextureRepeat: -10, 10"
+          material="src: #roku;repeat: -10, 10; normalMap: #roku-NRM; normalTextureRepeat: -10, 10"
           side="back"
           width="100"
           height="100"
           depth="100"
           position="0 50.1 -95"
-        ></a-box>
+        >
+          <!-- 3文字のランダムなクイズ -->
+        </a-box>
       </a-entity>
 
+      <!-- goal -->
       <a-entity position="0 0 -380" rotation="0 0 0">
         <a-plane
           color="#666"
@@ -443,14 +469,15 @@
         >
           <a-plane
             material="src:#tracks; normalMap: #tracks-NRM; transparent: true"
-            width="5.12"
+            width=" 5.12"
             height="2.56"
             position="0 0 0.01"
             scale="1 37 1"
-          ></a-plane>
+          >
+          </a-plane>
         </a-plane>
         <a-cylinder
-          id="tunnel-5"
+          id="goal-tunnel"
           color="#333"
           material="src: #tunnel; normalMap: #tunnel-NRM"
           side="double"
@@ -463,6 +490,7 @@
         ></a-cylinder>
       </a-entity>
 
+      <!-- sky -->
       <a-sky src="#sky"></a-sky>
     </a-scene>
   </body>
